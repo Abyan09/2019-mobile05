@@ -2,8 +2,11 @@ package polinema.ac.id.starterchapter05;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+
+import polinema.ac.id.starterchapter05.activites.StaticActivity;
 
 public class MainActivity extends AppCompatActivity {
 
