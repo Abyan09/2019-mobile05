@@ -8,8 +8,8 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import polinema.ac.id.starterchapter05.R;
-import polinema.fragments.BlueFragment;
-import polinema.fragments.RedFragment;
+import polinema.ac.id.starterchapter05.fragments.BlueFragment;
+import polinema.ac.id.starterchapter05.fragments.RedFragment;
 
 public class DynamicActivity extends AppCompatActivity {
 
@@ -21,17 +21,15 @@ public class DynamicActivity extends AppCompatActivity {
 
     public void handleClickLoadRedFragment(View view) {
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.replace(R.id.dynamic_fragment_placeholder,new RedFragment());
+        fragmentTransaction.replace(R.id.dynamic_fragment_placeholder,new RedFragment(),"RED_FRAGMENT");
+        fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
-        Fragment fragment =  new Fragment(this, RedFragment.class);
-        startActivity(fragment);
-    }
-
-    private void startActivity(Fragment fragment) {
     }
 
     public void handleClickLoadBlueFragment(View view) {
-        Fragment fragment =  new Fragment(this, BlueFragment.class);
-        startActivity(fragment);
+        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.replace(R.id.dynamic_fragment_placeholder,new BlueFragment(),"BLUE_FRAGMENT");
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit();
     }
 }

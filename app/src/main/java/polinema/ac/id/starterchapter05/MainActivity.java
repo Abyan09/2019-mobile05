@@ -14,7 +14,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void handlerClickStaticFragment(View view) {
-
+        Intent intent = new Intent(this, StaticActivity.class);
+        startActivity(intent);
     }
 
     public void handlerClickDynamicFragment(View view) {
