@@ -8,6 +8,7 @@ import android.view.View;
 
 import polinema.ac.id.starterchapter05.activites.DynamicActivity;
 import polinema.ac.id.starterchapter05.activites.StaticActivity;
+import polinema.ac.id.starterchapter05.activites.TugasFragmentActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,5 +29,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void handlerClickPraktikumFragment(View view) {
+        Intent intent = new Intent(this, TugasFragmentActivity.class);
+        startActivity(intent);
     }
 }
